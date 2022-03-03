@@ -1,6 +1,7 @@
 print("EcliFTP ^-^ /\n\n1. Install\n2. Uninstall\n3. Cancel")
 write("Option: ")
-local input = tostring(read())
+local input0 = read()
+local input = input0.sub(1, 1)
 
 if input == "1" then
 	print("Choose type to install:\n\n1. FTP Client\n2. Server FTP\n3. Cancel")
@@ -8,6 +9,7 @@ if input == "1" then
 	input2 = read()
 	if input2 == "1" then
 		print("Installing FTP Client...")
+		shell.run("wget ")
 		print("Done!")
 	elseif input2 == "2" then
 		print("Installing Server FTP...")
