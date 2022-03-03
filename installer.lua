@@ -3,16 +3,22 @@ write("Option: ")
 local input0 = read()
 local input = input0.sub(1, 1)
 
+local client = "https://raw.githubusercontent.com/Just-a-Unity-Dev/EcliFTP/master/client/ftpclient.lua"
+local server = "https://raw.githubusercontent.com/Just-a-Unity-Dev/EcliFTP/master/server/ftpserver.lua"
+
 if input == "1" then
 	print("Choose type to install:\n\n1. FTP Client\n2. Server FTP\n3. Cancel")
 	write("Option: ")
 	input2 = read()
 	if input2 == "1" then
 		print("Installing FTP Client...")
-		shell.run("wget ")
+		shell.run("wget ".. client .." ftpclient")
+		print("Installed as ftpclient")
 		print("Done!")
 	elseif input2 == "2" then
 		print("Installing Server FTP...")
+		shell.run("wget ".. server .." ftpclient")
+		print("Installed as ftpserver")
 		print("Done!")
 	else
 		print("Unknown command, quitting program")
@@ -25,4 +31,4 @@ else
 	print("Unknown command, quitting program")
 end
 print(input)
-print("^-^ /")
+print("\nBye! ^-^ /")
