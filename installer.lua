@@ -1,7 +1,6 @@
 print("EcliFTP ^-^ /\n\n1. Install\n2. Uninstall\n3. Cancel")
 write("Option: ")
 local input = tostring(read())
-print(input)
 
 if input == "1" then
 	print("Choose type to install:\n\n1. FTP Client\n2. Server FTP\n3. Cancel")
@@ -23,4 +22,5 @@ elseif input == "3" then
 else
 	print("Unknown command, quitting program")
 end
+print(input)
 print("^-^ /")
