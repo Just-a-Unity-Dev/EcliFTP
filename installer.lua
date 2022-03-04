@@ -1,3 +1,8 @@
+local function clear()
+	shell.run("clear")
+end
+
+clear()
 print("EcliFTP ^-^ /\n\n1. Install\n2. Uninstall\n3. Cancel")
 write("Option: ")
 local input0 = read()
@@ -5,10 +10,6 @@ local input = input0.sub(1, 1)
 
 local client = "https://raw.githubusercontent.com/Just-a-Unity-Dev/EcliFTP/master/client/ftpclient.lua"
 local server = "https://raw.githubusercontent.com/Just-a-Unity-Dev/EcliFTP/master/server/ftpserver.lua"
-
-local function clear()
-	shell.run("clear")
-end
 
 clear()
 if input == "1" then
@@ -34,7 +35,17 @@ if input == "1" then
 	end
 elseif input == "2" then
 	clear()
-
+	print("Confirm uninstall?")
+	write("(y/n): ")
+	input2 = read():sub(1, 1)
+	if input2 == "y" then
+		shell.run("rm ftpclient")
+		shell.run("rm ftpserver")
+		clear()
+		print("Uninstalled!")
+	else
+		print("Cancelled!")
+	end
 elseif input == "3" then
 	print("Quitting installer, thank you for using EcliFTP!")
 else
