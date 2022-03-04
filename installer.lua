@@ -16,14 +16,17 @@ if input == "1" then
 	print("Choose type to install:\n\n1. FTP Client\n2. Server FTP\n3. Cancel")
 	write("Option: ")
 	input2 = read()
+	clear()
 	if input2 == "1" then
 		print("Installing FTP Client...")
 		shell.run("wget ".. client .." ftpclient")
+		clear()
 		print("Installed as ftpclient")
 		print("Done!")
 	elseif input2 == "2" then
 		print("Installing Server FTP...")
 		shell.run("wget ".. server .." ftpclient")
+		clear()
 		print("Installed as ftpserver")
 		print("Done!")
 	else
