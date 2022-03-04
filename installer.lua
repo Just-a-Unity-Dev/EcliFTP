@@ -6,7 +6,7 @@ clear()
 print("EcliFTP ^-^ /\n\n1. Install\n2. Uninstall\n3. Cancel")
 write("Option: ")
 local input0 = read()
-local input = input0.sub(1, 1)
+local input = input0
 
 local client = "https://raw.githubusercontent.com/Just-a-Unity-Dev/EcliFTP/master/client/ftpclient.lua"
 local server = "https://raw.githubusercontent.com/Just-a-Unity-Dev/EcliFTP/master/server/ftpserver.lua"
