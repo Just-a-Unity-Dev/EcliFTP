@@ -39,3 +39,5 @@ else
 end
 print(input)
 print("\nBye! ^-^ /")
+sleep(1)
+clear()
