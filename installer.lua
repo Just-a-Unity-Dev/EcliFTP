@@ -26,7 +26,7 @@ if input == "1" then
 		print("Done!")
 	elseif input2 == "2" then
 		print("Installing Server FTP...")
-		shell.run("wget ".. server .." ftpclient")
+		shell.run("wget ".. server .." ftpserver")
 		clear()
 		print("Installed as ftpserver")
 		print("Done!")
