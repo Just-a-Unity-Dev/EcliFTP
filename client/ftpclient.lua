@@ -18,7 +18,7 @@ local id,message = rednet.receive(nil, 5)
 clear()
 
 if not id then
-	error("Server timeout, have you turned on the server?")
+	error("Server timeout, have you turned on/installed the server?")
 else
 	print("Connected to server %d":format(id))
 end
