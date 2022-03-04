@@ -37,7 +37,7 @@ elseif input == "2" then
 	clear()
 	print("Confirm uninstall?")
 	write("(y/n): ")
-	input2 = read():sub(1, 1)
+	input2 = read()
 	if input2 == "y" then
 		shell.run("rm ftpclient")
 		shell.run("rm ftpserver")
@@ -51,7 +51,6 @@ elseif input == "3" then
 else
 	print("Unknown command, quitting program")
 end
-print(input)
 print("\nBye! ^-^ /")
 sleep(1)
 clear()
