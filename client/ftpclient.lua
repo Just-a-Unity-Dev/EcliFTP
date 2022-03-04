@@ -20,6 +20,6 @@ clear()
 if not id then
 	error("Server timeout, have you turned on/installed the server?")
 else
-	print("Connected to server %d":format(id))
+	print("Connected to server #".. (id))
 end
 clear()
